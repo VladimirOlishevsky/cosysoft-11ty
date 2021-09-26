@@ -1,0 +1,20 @@
+.cosysoft {
+  color: #000;
+  font-size: 40px;
+  text-decoration: none;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.site-header__items {
+  list-style: none;
+}
+
+.site-header__link:hover {
+  color: #fed136
+}

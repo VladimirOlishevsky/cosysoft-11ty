@@ -1,0 +1,25 @@
+html {
+  font-size: 62.5%;
+  font-family: var(--font-family-base); }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.618;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+main {
+  padding: 13px; 
+}
+#frontend-engineer {
+  font-family: 'Kaushan Script', cursive;
+}
+a {
+  text-decoration: none;
+  color: black;
+}

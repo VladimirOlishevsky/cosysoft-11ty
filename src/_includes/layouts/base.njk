@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="{{ site.language }}" class="h-100">
+
+  <head>
+   
+    {% block head -%}
+      {% include "components/head.njk" -%}
+    {% endblock -%}
+
+  </head>
+
+  <body class="body">
+  {% include "components/navigation.njk" %}
+    {# {% block header -%}
+      {% include "partials/header.njk" -%}
+    {% endblock -%} #}
+
+    <div class="container">
+      {{ content | safe }}
+    </div>
+
+    <script src="scripts/main.js"></script>
+     {{js | safe}}
+  </body>
+</html>
