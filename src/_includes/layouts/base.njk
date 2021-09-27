@@ -11,16 +11,17 @@
   </head>
 
   <body class="body">
-  {% include "components/navigation.njk" %}
-    {# {% block header -%}
-      {% include "partials/header.njk" -%}
-    {% endblock -%} #}
+  {# {% include "components/navigation.njk" %} #}
+    {% block header -%}
+    {% include "components/navigation.njk" %}
+      {# {% include "partials/header.njk" -%} #}
+    {% endblock -%}
 
     <div class="container">
       {{ content | safe }}
     </div>
 
-    <script src="scripts/main.js"></script>
-     {{js | safe}}
+    <script src="/scripts/main.js"></script>
+     {{ js | safe }}
   </body>
 </html>
