@@ -1,7 +1,7 @@
 ---
 layout: layouts/about.njk
 title: About
-# permalink: /blog/index.html
+# permalink: /blog
 eleventyNavigation:
   key: About
   order: 1

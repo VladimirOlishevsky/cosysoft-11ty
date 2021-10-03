@@ -11,10 +11,17 @@
   padding: 30px;
 }
 
-.site-header__items {
+.site-header__item {
   list-style: none;
 }
 
 .site-header__link:hover {
   color: #fed136
+}
+.active-tab {
+  color: red
+}
+.site-header__list {
+  display: flex;
+  gap: 32px
 }
