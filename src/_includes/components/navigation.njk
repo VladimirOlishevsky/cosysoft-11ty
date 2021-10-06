@@ -1,18 +1,25 @@
-<header class="site-header">
+  <header class="header">
     <a class="cosysoft" href="{{ '/' | url }}">
       CosySoft
     </a>
-  <nav class="site-header__nav">
-    {% set navPages = collections.all | eleventyNavigation %}
-    <ul class="site-header__list">
-    {%- for entry in navPages %}
-      <li class="site-header__item" >
-        <a {% if entry.url == page.url %} 
-        class="active-tab"{% endif %} class="site-header__link" href="{{ entry.url | url }}">
-        {{ entry.title }}
-        </a>
-      </li>
-    {%- endfor %}
-    </ul>
-  </nav>
-</header>
+
+    <nav>
+      {% set navPages = collections.all | eleventyNavigation %}
+      <ul class="navigation__list">
+      {%- for entry in navPages %}
+        <li  
+        {% if entry.url == page.url %} 
+          class="active-tab"
+        {% endif %} 
+        >
+          <a 
+          class="site-header__link" 
+          href="{{ entry.url | url }}">
+
+          {{ entry.title }}
+          </a>
+        </li>
+      {%- endfor %}
+      </ul>
+    </nav>
+  </header>

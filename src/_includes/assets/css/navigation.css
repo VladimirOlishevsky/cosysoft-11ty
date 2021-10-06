@@ -5,23 +5,39 @@
   font-family: 'Kaushan Script', cursive;
 }
 
-.site-header {
+.header {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding: 20px 50px;
+  font-family: 'Lato';
 }
 
-.site-header__item {
+ul > li {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+ul > li::after {
+  display: block;
+  margin-top: 20px;
+  content: '';
+  height: 4px;
+  background-color: #fed136;
+  transition: all 300ms ease 0s;
+  transform: scaleX(0);
+}
+
+.active-tab::after {
+  margin-top: 20px;
+  transform: scaleX(1);
+}
+
+.navigation__list {
+  display: flex;
+  gap: 32px
 }
 
 .site-header__link:hover {
   color: #fed136
-}
-.active-tab {
-  color: red
-}
-.site-header__list {
-  display: flex;
-  gap: 32px
 }

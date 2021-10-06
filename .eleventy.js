@@ -13,14 +13,14 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addWatchTarget("./src/_includes/assets/js");
-  eleventyConfig.on("beforeBuild", () => {
-    build({
-      entryPoints: ["./src/_includes/assets/js/main.js"],
-      outfile: "dist/scripts/main.js",
-      bundle: true,
-      minify: production,
-    }).catch(() => process.exit(1));
-  });
+  // eleventyConfig.on("beforeBuild", () => {
+  //   build({
+  //     entryPoints: ["./src/_includes/assets/js/main.js"],
+  //     outfile: "dist/scripts/main.js",
+  //     bundle: true,
+  //     minify: production,
+  //   }).catch(() => process.exit(1));
+  // });
 
   // eleventyConfig.setDataDeepMerge(true);
  
