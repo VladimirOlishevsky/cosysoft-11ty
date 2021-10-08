@@ -6,12 +6,38 @@ const production = process.env.NODE_ENV === `production` // true when NODE_ENV i
 
 module.exports = function (eleventyConfig) {
 
+  // eleventyConfig.setTemplateFormats([
+  //   // Templates:
+  //   "html",
+  //   "njk",
+  //   "md",
+  //   // Static Assets:
+  //   "txt",
+  //   "svg",
+  //   "webp",
+  //   "png",
+  //   "jpg",
+  //   "jpeg",
+  //   "gif",
+  //   "ico",
+  //   "webmanifest",
+  // ]);
+
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  
+
+  /* Markdown Plugins */
+  let markdownIt = require("markdown-it");
+  let options = {
+    html: true,
+  };
+
+  eleventyConfig.setLibrary("md", markdownIt(options));
+
   eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addWatchTarget("./src/_includes/assets/js");
   // eleventyConfig.on("beforeBuild", () => {
   //   build({
@@ -23,7 +49,7 @@ module.exports = function (eleventyConfig) {
   // });
 
   // eleventyConfig.setDataDeepMerge(true);
- 
+
   return {
     dir: {
       input: 'src',

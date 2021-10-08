@@ -1,6 +1,7 @@
 html {
   font-size: 62.5%;
-  font-family: var(--font-family-base); }
+  font-family: var(--font-family-lato); 
+}
 
 body {
   display: flex;
@@ -13,6 +14,26 @@ body {
   background-color: var(--color-bg);
 }
 
+.img-subtitle-block {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+}
+.title {
+  font-size: 4.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle {
+  margin: 0;
+  display: flex;
+}
+.cosysoft__image {
+  border-radius: 16px;
+  width: 300px;
+  height: 300px
+}
 /* #main-layout {
   max-width: 1280px;
   margin: 0 auto;
@@ -35,7 +56,7 @@ main {
   padding: 13px; 
 }
 #frontend-engineer {
-  font-family: 'Kaushan Script', cursive;
+  font-family: var(--font-family-kaushan);
 }
 a {
   text-decoration: none;

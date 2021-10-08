@@ -2,8 +2,23 @@
 layout: layouts/base.njk
 ---
 <div id="content-layout">
+
+<h1 class="title">{{ home.title }}</h1>
+  <div class="img-subtitle-block">
+    <h2 class="subtitle">{{ home.subtitle }}</h1>
+     <img
+      class="cosysoft__image"
+      src="{% if home.image %}{{ home.image }}{% else %}https://source.unsplash.com/random/600x600{% endif %}"
+      alt="{{ home.image_alt }}"
+      loading="lazy">
+  </div>
+
+ <div>
+   {{ home.title }}
+  </div>
   <div id="frontend-engineer">
     Eleventy starter page
   </div>
+ 
 </div>
 
