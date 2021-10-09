@@ -1,0 +1,11 @@
+.vacancies__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.vacancies__item {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px 0px;
+    height: 221px
+}

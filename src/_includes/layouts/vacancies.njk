@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+section: vacancies
+---
+<div id="content-layout">
+    <div class="vacancies__header">
+        <h1>{{title}}</h1>
+        <h2>{{subtitle}}</h2>
+    </div>
+    <hr>
+     {{ layoutContent | safe }}
+    {# {% set vacancieslist = collections.vacancies %} #}
+    <div class="vacancies__list">
+   {% for post in collections.vacancies %}
+    <div class="vacancies__item">
+       <h1>{{post.data.title}}</h1>
+
+    </div>
+     {% endfor %}
+</div>
+    {# {% include "components/vacanciesList.njk" %} #}
+</div>

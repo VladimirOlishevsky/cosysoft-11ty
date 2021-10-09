@@ -1,0 +1,9 @@
+<div class="vacancies__list">
+   {% vacancies | log %}
+   {% for post in vacancieslist | reverse %}
+    <div class="vacancies__item">
+       <h1>{{vacancy.data.title}}</h1>
+
+    </div>
+     {% endfor %}
+</div>
