@@ -9,14 +9,6 @@ section: vacancies
     </div>
     <hr>
      {{ layoutContent | safe }}
-    {# {% set vacancieslist = collections.vacancies %} #}
-    <div class="vacancies__list">
-   {% for post in collections.vacancies %}
-    <div class="vacancies__item">
-       <h1>{{post.data.title}}</h1>
-
-    </div>
-     {% endfor %}
-</div>
-    {# {% include "components/vacanciesList.njk" %} #}
+    {% set vacancieslist = collections.vacancies %}
+    {% include "components/vacanciesList.njk" %}
 </div>

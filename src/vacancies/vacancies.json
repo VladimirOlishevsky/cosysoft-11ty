@@ -1,7 +1,5 @@
 {
-    "layout": "layouts/vacancies.njk",
-    "tags": [
-      "vacancies"
-    ]
+  "tags": "vacancies",
+  "layout": "layouts/vacancies.njk"
   }
   

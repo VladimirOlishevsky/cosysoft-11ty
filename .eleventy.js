@@ -1,3 +1,6 @@
+const { build } = require("esbuild");
+const production = process.env.NODE_ENV === `production` // true when NODE_ENV is production
+
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
@@ -5,8 +8,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   eleventyConfig.addPassthroughCopy("static");
-  eleventyConfig.addPassthroughCopy("assets/js/");
-
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
@@ -24,7 +25,21 @@ module.exports = function(eleventyConfig) {
     .use(markdownItAnchor, opts)
   );
 
-  eleventyConfig.addWatchTarget("./src/js");
+  // eleventyConfig.addWatchTarget("./src/js");
+
+  eleventyConfig.addWatchTarget("./src/_includes/assets/js");
+  eleventyConfig.on("beforeBuild", () => {
+    build({
+      entryPoints: ["./src/_includes/assets/js/main.js"],
+      outfile: "dist/scripts/main.js",
+      bundle: true,
+      minify: production,
+    }).catch(() => process.exit(1));
+  });
+
+  eleventyConfig.addCollection("vacancies", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/vacancies/*.md");
+  });
 
   return {
     templateFormats: ["md", "njk", "html", "liquid",  "svg", "webp", "png", "jpg", "jpeg"],
