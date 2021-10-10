@@ -12,14 +12,13 @@
   font-family: var(--font-family-lato);
 }
 
-ul > li {
-  list-style: none;
+ul > li.navPages__item {
   display: flex;
   flex-direction: column;
   font-weight: 700;
 }
 
-ul > li::after {
+ul > li.navPages__item::after {
   display: block;
   margin-top: 20px;
   content: '';
@@ -29,7 +28,7 @@ ul > li::after {
   transform: scaleX(0);
 }
 
-.active-tab::after {
+ul > li[aria-label="active-tab"]::after {
   margin-top: 20px;
   transform: scaleX(1);
 }

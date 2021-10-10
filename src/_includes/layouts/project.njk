@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+section: project
+---
+<div id="content-layout">
+  <h1 class="project__title">{{title}}</h1>
+  <hr>
+    {{ layoutContent | safe }}
+  <nav class="view__all">
+    <a class="vacancy__learn_more" href="{{ '/pages/portfolio/' | url }}">← View All Projects</a>
+  </nav>
+</div>

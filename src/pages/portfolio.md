@@ -1,7 +1,6 @@
 ---
-layout: layouts/about.njk
+layout: layouts/portfolio.njk
 title: Portfolio
-# permalink: /ee/lala/
 eleventyNavigation:
   key: Portfolio
   order: 2

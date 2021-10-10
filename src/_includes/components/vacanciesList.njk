@@ -1,8 +1,18 @@
 <div class="vacancies__list">
-   {% for vacancy in vacancieslist | reverse %}
-    <div class="vacancies__item">
-       <h1>{{vacancy.data.title}}</h1>
-
+   {% for vacancy in vacancieslist.vacancies %}
+    <a href={{ vacancy.link }} target="_blank" class="vacancies__item">
+    <div class="vacancy__main_info">
+      <div class="vacancy__title__block">
+         <span>
+            {{vacancy.emoji}}
+         </span>
+         <p class="vacancy__title">{{vacancy.title}}</p>
+      </div>
+      <p class="vacancy__title">{{vacancy.rank}}</p>
+      <p class="vacancy__city">{{vacancy.city}}</p>
     </div>
+    
+       <p class="vacancy__learn_more">Подробнее →</p>
+    </a>
      {% endfor %}
 </div>

@@ -41,7 +41,7 @@ body {
 } */
 
 #content-layout {
-  max-width: 900px;
+  max-width: 940px;
   margin: 0 auto;
   padding: 0 20px 20px;
 }
@@ -67,4 +67,23 @@ hr {
   height: 0; 
   overflow: visible;
   border-color:rgba(0, 0, 0, 0.06);
+}
+
+p {
+  margin: 0px;
+}
+
+.marked__text {
+  color: var(--color-yellow);
+  font-weight: bold;
+}
+
+.about__page_img {
+  max-width: 40%;
+}
+
+.about__page {
+
+  display: flex;
+  gap: 32px
 }

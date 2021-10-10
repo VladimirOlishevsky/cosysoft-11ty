@@ -37,8 +37,8 @@ module.exports = function(eleventyConfig) {
     }).catch(() => process.exit(1));
   });
 
-  eleventyConfig.addCollection("vacancies", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/vacancies/*.md");
+  eleventyConfig.addCollection("portfolio", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/portfolio/*.md");
   });
 
   return {

@@ -3,9 +3,48 @@
     flex-direction: column;
     align-items: center;
 }
+.vacancies__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.vacancy__main_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .vacancies__item {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px 0px;
-    height: 221px
+    height: 221px;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.vacancies__item:hover {
+    cursor: pointer;
+    box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 10%)
+}
+.vacancy__title__block {
+    display: flex;
+    gap: 8px;
+}
+.vacancy__title {
+    font-family: var(--font-family-lato);
+    font-weight: 700;
+}
+.vacancy__city {
+    font-family: var(--font-family-lato);
+    font-size: 14px;
+}
+
+.vacancy__learn_more {
+    color: var(--color-yellow);
+    font-weight: bold;
 }
