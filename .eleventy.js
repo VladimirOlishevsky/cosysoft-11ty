@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   eleventyConfig.addPassthroughCopy("static");
+  eleventyConfig.setDataDeepMerge(true);
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
@@ -37,9 +38,9 @@ module.exports = function(eleventyConfig) {
     }).catch(() => process.exit(1));
   });
 
-  eleventyConfig.addCollection("portfolio", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/portfolio/*.md");
-  });
+  // eleventyConfig.addCollection("portfolio", function(collectionApi) {
+  //   return collectionApi.getFilteredByGlob("src/portfolio/*.md");
+  // });
 
   return {
     templateFormats: ["md", "njk", "html", "liquid",  "svg", "webp", "png", "jpg", "jpeg"],
