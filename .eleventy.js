@@ -1,56 +1,14 @@
 const { build } = require("esbuild");
 const production = process.env.NODE_ENV === `production` // true when NODE_ENV is production
-
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-// const Image = require("@11ty/eleventy-img");
 
-// async function imageShortcode(src, alt, sizes) {
-//   let image = await Image(src, {
-//     widths: [600],
-//     formats: ["jpeg"],
-//     outputDir: "./src/img/"
-//   });
-
-//   let imageAttributes = {
-//     alt,
-//     sizes,
-//     loading: "lazy",
-//     decoding: "async",
-//   };
-
-//   console.log(image);
-
-//   // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-//   return Image.generateHTML(image, imageAttributes);
-// }
 
 module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  // eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-  eleventyConfig.addNunjucksAsyncShortcode("image", require('./src/js/demo'));
+  // eleventyConfig.addNunjucksAsyncShortcode("image", require('./src/js/demo'));
 
-  eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.setDataDeepMerge(true);
-
-  /* Markdown Plugins */
-  let markdownIt = require("markdown-it");
-  let markdownItAnchor = require("markdown-it-anchor");
-  let options = {
-    html: true,
-    breaks: true,
-    linkify: true
-  };
-  let opts = {
-    permalink: false
-  };
-
-  eleventyConfig.setLibrary("md", markdownIt(options)
-    .use(markdownItAnchor, opts)
-  );
-
-  // eleventyConfig.addWatchTarget("./src/js");
-
   eleventyConfig.addWatchTarget("./src/_includes/assets/js");
   eleventyConfig.on("beforeBuild", () => {
     build({
@@ -60,10 +18,6 @@ module.exports = function (eleventyConfig) {
       minify: production,
     }).catch(() => process.exit(1));
   });
-
-  // eleventyConfig.addCollection("portfolio", function(collectionApi) {
-  //   return collectionApi.getFilteredByGlob("src/portfolio/*.md");
-  // });
 
   return {
     templateFormats: ["md", "njk", "html", "liquid", "svg", "webp", "png", "jpg", "jpeg"],

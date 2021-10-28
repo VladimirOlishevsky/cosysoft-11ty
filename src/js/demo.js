@@ -13,10 +13,6 @@ async function imageShortcode(src, alt, sizes) {
     loading: "lazy",
     decoding: "async",
   };
-
-  console.log(image);
-
-  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
   return Image.generateHTML(image, imageAttributes);
 }
 
