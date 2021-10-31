@@ -1,5 +1,5 @@
 ---
-layout: layouts/vacancies.njk
+layout: pages/vacancies.njk
 title: Vacancies
 subtitle: On this page you can see the open vacancies in our company.
 eleventyNavigation:

@@ -18,7 +18,8 @@ ul > li.navPages__item {
   font-weight: 700;
 }
 
-ul > li.navPages__item::after {
+ul > li.navPages__item::after,
+ul > li.pagination__item::after {
   display: block;
   margin-top: 20px;
   content: '';
@@ -28,7 +29,8 @@ ul > li.navPages__item::after {
   transform: scaleX(0);
 }
 
-ul > li[aria-label="active-tab"]::after {
+ul > li[aria-label="active-tab"]::after,
+ul > li[aria-current="active-pagination"]::after {
   margin-top: 20px;
   transform: scaleX(1);
 }
@@ -38,6 +40,7 @@ ul > li[aria-label="active-tab"]::after {
   gap: 32px
 }
 
-.site-header__link:hover {
+.site-header__link:hover,
+.pagination__link:hover {
   color: var(--color-yellow)
 }

@@ -94,3 +94,10 @@ p {
   align-items: center;
   gap: 32px
 }
+
+.pagination__ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 8px;
+}

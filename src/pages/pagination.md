@@ -1,5 +1,5 @@
 ---
-layout: layouts/pagination.njk
+layout: pages/pagination.njk
 title: Pagination
 eleventyNavigation:
   key: Pagination

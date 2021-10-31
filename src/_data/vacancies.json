@@ -1,66 +1,64 @@
-{
-    "vacancies": [
-        {
-            "title": "Java-разработчик",
-            "emoji": "🤟",
-            "city": "Самара",
-            "rank": "Middle | Senior",
-            "link": "https://www.google.com/",
-            "date": "2019-01-01T00:00:00.000Z",
-            "tags": [
-                "java",
-                "samara"
-            ]
-        },
-        {
-            "title": "Java-разработчик",
-            "emoji": "🤟",
-            "city": "Тольятти",
-            "rank": "Middle | Senior",
-            "link": "https://www.google.com/",
-            "date": "2019-01-01T00:00:00.000Z",
-            "tags": [
-                "java",
-                "tlt"
-            ]
-        },
-        {
-            "title": "Manual QA-инженер",
-            "emoji": "🤟",
-            "city": "Тольятти",
-            "rank": "Junior",
-            "link": "https://www.google.com/",
-            "date": "2019-01-01T00:00:00.000Z",
-            "tags": [
-                "qa",
-                "manual",
-                "tlt"
-            ]
-        },
-        {
-            "title": "QA-инженер",
-            "emoji": "🤟",
-            "city": "Самара",
-            "rank": "Middle",
-            "link": "https://www.google.com/",
-            "date": "2019-01-01T00:00:00.000Z",
-            "tags": [
-                "qa",
-                "samara"
-            ]
-        },
-        {
-            "title": "React-разработчик",
-            "emoji": "🤟",
-            "city": "Самара",
-            "rank": "Middle",
-            "link": "https://www.google.com/",
-            "date": "2019-01-01T00:00:00.000Z",
-            "tags": [
-                "react",
-                "js",
-                "samara"
-            ]
-        }
-    ]
-}
+[
+    {
+        "title": "Java-разработчик",
+        "emoji": "🤟",
+        "city": "Самара",
+        "rank": "Middle | Senior",
+        "link": "https://www.google.com/",
+        "date": "2019-01-01T00:00:00.000Z",
+        "tags": [
+            "java",
+            "samara"
+        ]
+    },
+    {
+        "title": "Java-разработчик",
+        "emoji": "🤟",
+        "city": "Тольятти",
+        "rank": "Middle | Senior",
+        "link": "https://www.google.com/",
+        "date": "2019-01-01T00:00:00.000Z",
+        "tags": [
+            "java",
+            "tlt"
+        ]
+    },
+    {
+        "title": "Manual QA-инженер",
+        "emoji": "🤟",
+        "city": "Тольятти",
+        "rank": "Junior",
+        "link": "https://www.google.com/",
+        "date": "2019-01-01T00:00:00.000Z",
+        "tags": [
+            "qa",
+            "manual",
+            "tlt"
+        ]
+    },
+    {
+        "title": "QA-инженер",
+        "emoji": "🤟",
+        "city": "Самара",
+        "rank": "Middle",
+        "link": "https://www.google.com/",
+        "date": "2019-01-01T00:00:00.000Z",
+        "tags": [
+            "qa",
+            "samara"
+        ]
+    },
+    {
+        "title": "React-разработчик",
+        "emoji": "🤟",
+        "city": "Самара",
+        "rank": "Middle",
+        "link": "https://www.google.com/",
+        "date": "2019-01-01T00:00:00.000Z",
+        "tags": [
+            "react",
+            "js",
+            "samara"
+        ]
+    }
+]

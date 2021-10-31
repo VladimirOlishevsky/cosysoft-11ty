@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: collections.portfolio
+    size: 2
+    alias: portfolio
+---
+<div id="content-layout">
+    <div class="vacancies__header">
+        <h1>{{title}}</h1>
+    </div>
+    <hr>
+    <div class="pagination__page">
+
+      <div class="portfolio__list">
+        {% for project in portfolio %}
+          <a class="portfolio__item" href="{{ project.url | url }}">
+            <img src={{ project.data.preview }} class="portfolio__img">
+            <div class="portfolio__preview_info">
+              <p class="portfolio__title">{{ project.data.title }}</p>
+              <p class="portfolio__description">{{ project.data.description }}</p>
+            </div>
+          </a>
+          {% endfor %}
+      </div>
+
+      <nav aria-labelledby="page-navigation">
+          <ul class="pagination__ul">
+            <li class="pagination__item">{% if page.url != pagination.href.first %}<a class="pagination__link" href="{{ pagination.href.first }}">First</a>{% else %}First{% endif %}</li>
+            <li class="pagination__item">{% if pagination.href.previous %}<a class="pagination__link" href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+            {%- for pageEntry in pagination.pages %}
+            <li class="pagination__item" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="active-pagination"{% endif %}><a class="pagination__link" href="{{ pagination.hrefs[ loop.index0 ] }}">Page {{ loop.index }}</a></li>
+            {%- endfor %}
+            <li class="pagination__item">{% if pagination.href.next %}<a class="pagination__link" href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+            <li class="pagination__item">{% if page.url != pagination.href.last %}<a class="pagination__link" href="{{ pagination.href.last }}">Last</a>{% else %}Last{% endif %}</li>
+          </ul>
+        </nav>
+    </div>
+</div>
