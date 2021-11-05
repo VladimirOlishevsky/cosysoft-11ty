@@ -7,16 +7,38 @@ layout: layouts/base.njk
     </div>
     <hr>
     <div class="about__page">
-      <h3>
-        For 9 years we have been living web and mobile development: we design, test
-        and implement. We make complex services enjoyable, accounting systems understandable, 
-        and corporate systems soft and gentle. We say no to streaming development!
+      <div class="about__description">
+        <h3>
+          For 9 years we have been living web and mobile development: we design, test
+          and implement. We make complex services enjoyable, accounting systems understandable, 
+          and corporate systems soft and gentle. We say no to streaming development!
 
-          <p>Now in the team: frontend and backend developers, QA engineers, projects, account managers, HR, PR.</p>
+            <p>Now in the team: frontend and backend developers, QA engineers, projects, account managers, HR, PR.</p>
 
-          <p>There are 50+ cool people in total ... But there should be more of them, so here you go :)</p>
-      </h3>
-      <img src="https://static.tildacdn.com/tild6665-6465-4438-a664-623633303466/nathanriley514162.jpg" class="about__page_img" />
+            <p>There are 50+ cool people in total ... But there should be more of them, so here you go :)</p>
+        </h3>
+        <img src="https://static.tildacdn.com/tild6665-6465-4438-a664-623633303466/nathanriley514162.jpg" class="about__page_img" />
+      </div>
+      
+
+      <div class="about__users">
+        {% for user in users | limit(3) %}
+        <div class="about__user">
+          <h3>{{ user.name | makeLowerCase }}</h3>
+          <h5>{{ user.email }}</h5>
+          <h5>{{ user.phone }}</h5>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="about__video">
+        {% youtube "imOUKPruPHk" %}
+      </div>
     </div>
+
+
    
+
+
+    
 </div>

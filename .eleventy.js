@@ -9,6 +9,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addWatchTarget("./src/_includes/assets/js");
+  eleventyConfig.addWatchTarget('./src/filters');
   eleventyConfig.on("beforeBuild", () => {
     build({
       entryPoints: ["./src/_includes/assets/js/main.js"],
@@ -17,6 +18,12 @@ module.exports = function (eleventyConfig) {
       minify: production,
     }).catch(() => process.exit(1));
   });
+
+  eleventyConfig.addFilter('makeLowerCase', require('./src/filters/filter'));
+  eleventyConfig.addFilter('limit', require('./src/filters/limit'));
+
+  eleventyConfig.addShortcode('youtube', require('./src/filters/youtube'));
+  
 
   return {
     templateFormats: ["md", "njk", "html", "liquid", "svg", "webp", "png", "jpg", "jpeg"],

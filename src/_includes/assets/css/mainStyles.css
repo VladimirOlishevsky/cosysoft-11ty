@@ -83,9 +83,9 @@ p {
 }
 
 .about__page {
-
   display: flex;
-  gap: 32px
+  gap: 64px;
+  flex-direction: column;
 }
 .pagination__page {
 
@@ -100,4 +100,28 @@ p {
   flex-direction: row;
   list-style-type: none;
   gap: 8px;
+}
+
+.about__users {
+  display: flex;
+  flex-direction: row;
+}
+
+.about__user h3, h5{
+  margin: 0;
+}
+.about__user{
+  border: 1px solid #f2f4f2;
+  flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    padding: 10px;
+    align-items: center;
+}
+
+.about__description {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
 }
