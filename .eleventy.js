@@ -2,6 +2,8 @@ const { build } = require("esbuild");
 const production = process.env.NODE_ENV === `production` // true when NODE_ENV is production
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
+const { toLowerCase, limit } = require('./src/_includes/assets/js/filter')
+
 
 module.exports = function (eleventyConfig) {
 
@@ -19,10 +21,10 @@ module.exports = function (eleventyConfig) {
     }).catch(() => process.exit(1));
   });
 
-  eleventyConfig.addFilter('makeLowerCase', require('./src/filters/filter'));
-  eleventyConfig.addFilter('limit', require('./src/filters/limit'));
+  eleventyConfig.addFilter('makeLowerCase', toLowerCase);
+  eleventyConfig.addFilter('limit', limit);
 
-  eleventyConfig.addShortcode('youtube', require('./src/filters/youtube'));
+  eleventyConfig.addShortcode('youtube', require('./src/_includes/assets/js/youtube'));
   
 
   return {

@@ -1,5 +1,3 @@
-// import './demo.js';
-
 import { annotate } from 'rough-notation';
 
 const engineer = document.querySelector("#frontend-engineer");
