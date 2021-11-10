@@ -1,5 +1,5 @@
 ---
-layout: layouts/portfolio.njk
+layout: components/portfolio.njk
 title: Portfolio
 eleventyNavigation:
   key: Portfolio
