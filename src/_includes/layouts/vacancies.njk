@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+---
+<div id="content-layout">
+    <div class="vacancies__header">
+        <h1>{{title}}</h1>
+        <h2>{{subtitle}}</h2>
+    </div>
+    <hr>
+
+    {% set vacancieslist = vacancies %}
+
+    <div class="vacancies__list">
+        {% for vacancy in vacancieslist %}
+            <a href={{ vacancy.link }} target="_blank" class="vacancies__item">
+                <div class="vacancy__main_info">
+                    <div class="vacancy__title__block">
+                        <span>
+                            {{vacancy.emoji}}
+                        </span>
+                        <p class="vacancy__title">{{vacancy.title}}</p>
+                    </div>
+                    <p class="vacancy__title">{{vacancy.rank}}</p>
+                    <p class="vacancy__city">{{vacancy.city}}</p>
+                </div>
+                <p class="vacancy__learn_more">Подробнее →</p>
+            </a>
+        {% endfor %}
+    </div>
+</div>

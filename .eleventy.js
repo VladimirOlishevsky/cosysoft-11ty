@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('youtube', require('./src/_includes/assets/js/youtube'));
 
   return {
-    templateFormats: ["md", "njk", "html", "png", "jpg", "jpeg"],
+    templateFormats: ["md", "njk", "png", "jpg", "jpeg"],
     dir: {
       input: "src",
       output: "dist"

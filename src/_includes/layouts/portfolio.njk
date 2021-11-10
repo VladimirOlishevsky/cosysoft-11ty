@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+---
+<div id="content-layout">
+    
+    {{ content | safe }}
+     
+    {% set portfoliolist = collections.portfolio %}
+
+    <div class="portfolio__list">
+        {% for project in portfoliolist %}
+            <a class="portfolio__item" href="{{ project.data.url | url }}">
+            <img src={{ project.data.preview }} class="portfolio__img">
+            <div class="portfolio__preview_info">
+                <p class="portfolio__title">{{ project.data.title }}</p>
+                <p class="portfolio__description">{{ project.data.description }}</p>
+            </div>
+            </a>
+        {% endfor %}
+    </div>
+</div>
