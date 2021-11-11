@@ -11,7 +11,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('makeLowerCase', toLowerCase);
   eleventyConfig.addFilter('limit', limit);
   eleventyConfig.addShortcode('youtube', require('./src/_includes/assets/js/youtube'));
-
+  
+  eleventyConfig.addPassthroughCopy("static")
   eleventyConfig.addWatchTarget("./src/_includes/assets/js");
   eleventyConfig.addWatchTarget('./src/filters');
   eleventyConfig.on("beforeBuild", () => {
