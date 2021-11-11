@@ -1,5 +1,11 @@
 <h1 align="center">Cosysoft 11ty</h1>
 
+<h1 align="center">
+
+[![Build Status](https://app.travis-ci.com/VladimirOlishevsky/cosysoft-11ty.svg?branch=master)](https://app.travis-ci.com/VladimirOlishevsky/cosysoft-11ty)
+
+</h1>
+
 <img src="./assets/cosysoft-11ty.gif" width="100%">
 
 ## Description
