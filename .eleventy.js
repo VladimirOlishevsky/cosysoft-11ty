@@ -29,6 +29,7 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "src",
       output: "dist"
-    }
+    },
+    pathPrefix: production ? `/cosysoft-11ty/` : `/`,
   };
 };
