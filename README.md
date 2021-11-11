@@ -16,7 +16,7 @@ This small app builded on [11ty](https://www.11ty.dev/). You can see the most po
 - build javascript code with esbuild
 
 ## Where to begin:
-- Clone the repository https://github.com/VladimirOlishevsky/atm-test
+- Clone the repository https://github.com/VladimirOlishevsky/cosysoft-11ty
 - Set ```yarn``` dependencies
 - Start a ```yarn start``` project.
 - Enjoy it :)
