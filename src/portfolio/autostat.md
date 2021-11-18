@@ -2,7 +2,7 @@
 url: autostat
 title: Система мониторинга региональных продаж
 description: Autostat — система администрирования, позволяющая выполнять гибкую настройку ролей и прав. Используя эту систему наш заказчик имеет возможность предоставлять различные права на данные своим клиентам. Система интегрирована с подсистемой VINfinder.
-preview: /static/autostat-preview.jpg
+preview: /cosysoft-11ty/static/autostat-preview.jpg
 subtitle: Front-end & Back-end
 tags:
   - php
