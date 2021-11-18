@@ -3,7 +3,7 @@ url: tltsu
 title: Информационная система «Центр Карьеры»
 description: Автоматизированная информационная система «Центр карьеры ТГУ» – виртуальная площадка для поиска работы и подбора персонала. Система позволила оптимизировать процесс взаимодействия студентов ТГУ и работодателей.
 subtitle: Информационная система «Центр Карьеры»
-preview: /static/tltsu-preview.jpg
+preview: /cosysoft-11ty/static/tltsu-preview.jpg
 tags:
   - php
   - yii
@@ -11,7 +11,7 @@ tags:
   - javaScript
 ---
 
-<img src="/static/tltsu.jpg" alt="diary" style="max-width: 100%;"/>
+<img src="/cosysoft-11ty/static/tltsu.jpg" alt="diary" style="max-width: 100%;"/>
 
 ***
 

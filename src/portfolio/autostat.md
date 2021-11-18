@@ -10,7 +10,7 @@ tags:
   - mysql
 ---
 
-<img src="/static/autostat.jpg" alt="autostat" style="max-width: 100%;"/>
+<img src="/cosysoft-11ty/static/autostat.jpg" alt="autostat" style="max-width: 100%;"/>
 
 <span class="marked__text">Система мониторинга</span> состоит из двух частей — аналитической системы с возможностью поиска и анализа (выгрузки) данных (VINfinder) и системы администрирования с возможностью управления пользователями и разделения по правам с подсистемой мониторинга региональных продаж, позволяющая находить автомобили по VIN-коду (Autostat).
 

@@ -3,14 +3,14 @@ url: radar
 title: Информационно-аналитическая система RADAR
 description: Radar — информационная система для анализа, прогнозирования и расчетов емкости региональных рынков автомобилей, автомобильных компонентов и смежных с ними на основе OpenSource системы бизнес-аналитики — Saiku Analytics
 subtitle: Front-end & Back-end
-preview: /static/radar-preview.jpg
+preview: /cosysoft-11ty/static/radar-preview.jpg
 tags:
   - java
   - mongo
   - javaScript
   - backboneJS
 ---
-<img src="/static/radar.jpg" alt="diary" style="max-width: 100%;"/>
+<img src="/cosysoft-11ty/static/radar.jpg" alt="diary" style="max-width: 100%;"/>
 
 ***
 

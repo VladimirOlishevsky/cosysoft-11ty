@@ -25,7 +25,6 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    // pathPrefix: ".",
     templateFormats: ["md", "njk", "png", "jpg", "jpeg"],
     dir: {
       input: "src",

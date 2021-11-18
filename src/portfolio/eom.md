@@ -3,7 +3,7 @@ url: eom
 title: Система тестирования для проекта «Московская электронная школа»
 description: Конструктор тестов предусматривает широкий выбор типов вопросов, импорт уже созданных заданий и генерацию варианта для прохождения. Преподаватель имеет возможность отслеживать прохождение тестов в реальном времени через личный кабинет, а также просматривать результаты уже пройденных тестов. 
 subtitle: Front-end & Back-end
-preview: /static/eom-preview.png
+preview: /cosysoft-11ty/static/eom-preview.png
 tags:
   - react
   - redux
@@ -11,7 +11,7 @@ tags:
   - kotlin
   - spring
 ---
-<img src="/static/eom.png" alt="diary" style="max-width: 100%;"/>
+<img src="/cosysoft-11ty/static/eom.png" alt="diary" style="max-width: 100%;"/>
 
 *** 
 

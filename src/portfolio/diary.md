@@ -3,7 +3,7 @@ url: diary
 title: Электронный дневник для проекта «Московская электронная школа»
 description: С помощью Дневника администрация школы может эффективно управлять образовательным процессом, сформировать необходимые аттестационные периоды, определить формы промежуточной аттестации, а также обеспечить автоматическое формирование отчётов об успеваемости учеников.
 subtitle: Front-end & Mobile
-preview: /static/diary-preview.png
+preview: /cosysoft-11ty/static/diary-preview.png
 tags:
   - javaScript
   - typescript
@@ -12,7 +12,7 @@ tags:
   - react-native
   - storyBook
 ---
-<img src="/static/diary.png" alt="diary" style="max-width: 100%;"/>
+<img src="/cosysoft-11ty/static/diary.png" alt="diary" style="max-width: 100%;"/>
 
 #### Электронный дневник - один из ключевых сервисов проекта "Московская электронная школа".
 
