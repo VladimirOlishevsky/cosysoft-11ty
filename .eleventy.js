@@ -25,11 +25,12 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
+    pathPrefix: "/",
     templateFormats: ["md", "njk", "png", "jpg", "jpeg"],
     dir: {
       input: "src",
       output: "dist"
     },
-    pathPrefix: production ? `/cosysoft-11ty/` : `/`,
+    // pathPrefix: production ? `/cosysoft-11ty/` : `/`,
   };
 };
