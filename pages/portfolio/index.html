@@ -1,0 +1,441 @@
+<!doctype html>
+
+<html lang="ru">
+
+  <head>
+<title>Welcome to Cosysoft</title>
+<meta charset="utf-8">
+<meta name="description" content="The development of information technology is our concern. Cozy digital team. We select projects for developers. You will be comfortable.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/cosysoft-11ty/static/favicon.png"/>
+
+
+<style>
+    
+html {
+  font-size: 62.5%;
+  font-family: var(--font-family-lato); 
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.618;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.img-subtitle-block {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+}
+.title {
+  font-size: 4.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle {
+  margin: 0;
+  display: flex;
+}
+.cosysoft__image {
+  border-radius: 16px;
+  width: 300px;
+  height: 300px
+}
+
+#content-layout {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 20px 120px;
+}
+
+@media (min-width: 1024px) {
+  #main-layout {
+    padding: 20px 40px;
+  }
+}
+
+main {
+  padding: 13px; 
+}
+#frontend-engineer {
+  font-family: var(--font-family-kaushan);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+hr {
+  box-sizing: content-box; 
+  height: 0; 
+  overflow: visible;
+  border-color:rgba(0, 0, 0, 0.06);
+}
+
+p {
+  margin: 0px;
+}
+
+.marked__text {
+  color: var(--color-yellow);
+  font-weight: bold;
+}
+
+.about__page_img {
+  max-width: 40%;
+}
+
+.about__page {
+  display: flex;
+  gap: 64px;
+  flex-direction: column;
+}
+.pagination__page {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px
+}
+
+.pagination__ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 8px;
+}
+
+.about__users {
+  display: flex;
+  flex-direction: row;
+}
+
+.about__user h3, h5{
+  margin: 0;
+}
+.about__user{
+  border: 1px solid #f2f4f2;
+  flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    padding: 10px;
+    align-items: center;
+}
+
+.about__description {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.cosysoft {
+  color: #000;
+  font-size: 40px;
+  text-decoration: none;
+  font-family: var(--font-family-kaushan);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  font-family: var(--font-family-lato);
+}
+
+ul > li.navPages__item {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+ul > li.navPages__item::after,
+ul > li.pagination__item::after {
+  display: block;
+  margin-top: 20px;
+  content: '';
+  height: 4px;
+  background-color: var(--color-yellow);
+  transition: all 300ms ease 0s;
+  transform: scaleX(0);
+}
+
+ul > li[aria-label="active-tab"]::after,
+ul > li[aria-current="active-pagination"]::after {
+  margin-top: 20px;
+  transform: scaleX(1);
+}
+
+.navigation__list {
+  display: flex;
+  gap: 32px
+}
+
+.site-header__link:hover,
+.pagination__link:hover {
+  color: var(--color-yellow)
+}
+:root {
+  /* Brand Colors */
+  --color-yellow: #fed136;
+  --color-secondary: #2f5bc2;
+
+  /* Background Colors */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f7f7f7;
+  --color-bg-accent: #c79191;
+
+  /* Text and Border Colors */
+  --color-text: #222222;
+  --color-text-alt: #ffffff;
+  --color-border: rgba(0, 0, 0, 0.06);
+
+  /* Status Colors */
+  --color-danger: #e03e3e;
+
+  /* Typography */
+  --font-family-lato: 'Lato', sans-serif;
+  --font-family-kaushan: 'Kaushan Script', cursive, sans-serif;
+
+  /* Sizes */
+  --site-width: 850px;
+
+  /* Other */
+  --border-radius: 12px;
+  --border-radius-sm: 5px;
+}
+
+.vacancies__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.vacancies__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.vacancy__main_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.vacancies__item {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px 0px;
+    height: 221px;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.vacancies__item:hover {
+    cursor: pointer;
+    box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 10%)
+}
+.vacancy__title__block {
+    display: flex;
+    gap: 8px;
+}
+.vacancy__title {
+    font-family: var(--font-family-lato);
+    font-weight: 700;
+}
+.vacancy__city {
+    font-family: var(--font-family-lato);
+    font-size: 14px;
+}
+
+.vacancy__learn_more {
+    color: var(--color-yellow);
+    font-weight: bold;
+}
+.portfolio__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.portfolio__item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.portfolio__img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.portfolio__preview_info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.portfolio__title {
+    font-family: var(--font-family-lato);
+    font-weight: 700;
+}
+
+.portfolio__description {
+    font-size: 14px;
+}
+
+.project__title {
+    text-align: center;
+}
+
+.view__all {
+    margin: 30px 0px;
+}
+
+</style>
+</head> <body class="body">
+      <header class="header">
+    <a class="cosysoft" href="/cosysoft-11ty/">
+      CosySoft
+    </a>
+
+    <nav>
+      
+      <ul class="navigation__list">
+        <li class="navPages__item"
+         
+        >
+          <a 
+          class="site-header__link" 
+          href="/cosysoft-11ty/pages/vacancies/">
+          Vacancies
+          </a>
+        </li>
+        <li class="navPages__item"
+         
+          aria-label="active-tab"
+         
+        >
+          <a 
+          class="site-header__link" 
+          href="/cosysoft-11ty/pages/portfolio/">
+          Portfolio
+          </a>
+        </li>
+        <li class="navPages__item"
+         
+        >
+          <a 
+          class="site-header__link" 
+          href="/cosysoft-11ty/pages/about/">
+          About
+          </a>
+        </li>
+        <li class="navPages__item"
+         
+        >
+          <a 
+          class="site-header__link" 
+          href="/cosysoft-11ty/pages/pagination/">
+          Pagination
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+    <div class="container">
+      <div id="content-layout">
+    
+    <div class="vacancies__header">
+  <h1>Portfolio</h1>
+</div>
+<hr>
+<h2>Lorem ipsum dolor</h2>
+<ul>
+<li>sit amet,</li>
+<li>consectetur</li>
+<li>adipiscing elit.</li>
+</ul>
+<p>Morbi pulvinar porttitor ipsum, at gravida dolor euismod at. Praesent id orci ut sem cursus bibendum eu ut arcu. Duis sit amet tincidunt risus. Quisque rutrum metus a risus eleifend pulvinar. In vitae nibh blandit, porttitor magna nec, egestas dui. Sed vitae felis vitae arcu pulvinar semper. Donec ac nibh non nibh laoreet dictum. Nunc varius mollis dignissim. Duis velit massa, tincidunt et neque vitae, consequat viverra justo. Fusce convallis cursus blandit. Praesent pulvinar auctor velit eget fermentum. Nam nec porta eros, non viverra eros. Pellentesque quam nulla, vulputate nec tellus at, fringilla blandit tortor. Sed euismod molestie cursus. Quisque lectus augue, facilisis nec elit a, laoreet posuere dui.</p>
+<p>Donec congue erat nibh, ac imperdiet ipsum malesuada sed. Etiam aliquam, nunc vel accumsan tincidunt, est nibh bibendum tortor, ut varius velit libero in libero. Nam ut enim neque. Sed hendrerit est dui, in aliquet sem pellentesque in. Vestibulum quis ipsum pretium, luctus risus nec, aliquam est. Aenean auctor augue eros, eu bibendum sem dignissim tristique. Nam a condimentum nulla, eget interdum velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam rhoncus urna id lacinia hendrerit. Curabitur at tempor turpis. Vivamus ac orci eu arcu tempus euismod.</p>
+
+     
+    
+
+    <div class="portfolio__list">
+        
+            <a class="portfolio__item" href="autostat">
+            <img src=/cosysoft-11ty/static/autostat-preview.jpg class="portfolio__img">
+            <div class="portfolio__preview_info">
+                <p class="portfolio__title">Система мониторинга региональных продаж</p>
+                <p class="portfolio__description">Autostat — система администрирования, позволяющая выполнять гибкую настройку ролей и прав. Используя эту систему наш заказчик имеет возможность предоставлять различные права на данные своим клиентам. Система интегрирована с подсистемой VINfinder.</p>
+            </div>
+            </a>
+        
+            <a class="portfolio__item" href="diary">
+            <img src=/cosysoft-11ty/static/diary-preview.png class="portfolio__img">
+            <div class="portfolio__preview_info">
+                <p class="portfolio__title">Электронный дневник для проекта «Московская электронная школа»</p>
+                <p class="portfolio__description">С помощью Дневника администрация школы может эффективно управлять образовательным процессом, сформировать необходимые аттестационные периоды, определить формы промежуточной аттестации, а также обеспечить автоматическое формирование отчётов об успеваемости учеников.</p>
+            </div>
+            </a>
+        
+            <a class="portfolio__item" href="docker">
+            <img src=/cosysoft-11ty/static/docker-preview.jpg class="portfolio__img">
+            <div class="portfolio__preview_info">
+                <p class="portfolio__title">Система управления Docker-контейнерами</p>
+                <p class="portfolio__description">Разработка сервиса автоматизированного управления контейнеризацией пользовательских сессий на основе технологии Docker</p>
+            </div>
+            </a>
+        
+            <a class="portfolio__item" href="eom">
+            <img src=/cosysoft-11ty/static/eom-preview.png class="portfolio__img">
+            <div class="portfolio__preview_info">
+                <p class="portfolio__title">Система тестирования для проекта «Московская электронная школа»</p>
+                <p class="portfolio__description">Конструктор тестов предусматривает широкий выбор типов вопросов, импорт уже созданных заданий и генерацию варианта для прохождения. Преподаватель имеет возможность отслеживать прохождение тестов в реальном времени через личный кабинет, а также просматривать результаты уже пройденных тестов.</p>
+            </div>
+            </a>
+        
+            <a class="portfolio__item" href="radar">
+            <img src=/cosysoft-11ty/static/radar-preview.jpg class="portfolio__img">
+            <div class="portfolio__preview_info">
+                <p class="portfolio__title">Информационно-аналитическая система RADAR</p>
+                <p class="portfolio__description">Radar — информационная система для анализа, прогнозирования и расчетов емкости региональных рынков автомобилей, автомобильных компонентов и смежных с ними на основе OpenSource системы бизнес-аналитики — Saiku Analytics</p>
+            </div>
+            </a>
+        
+            <a class="portfolio__item" href="tltsu">
+            <img src=/cosysoft-11ty/static/tltsu-preview.jpg class="portfolio__img">
+            <div class="portfolio__preview_info">
+                <p class="portfolio__title">Информационная система «Центр Карьеры»</p>
+                <p class="portfolio__description">Автоматизированная информационная система «Центр карьеры ТГУ» – виртуальная площадка для поиска работы и подбора персонала. Система позволила оптимизировать процесс взаимодействия студентов ТГУ и работодателей.</p>
+            </div>
+            </a>
+        
+    </div>
+</div>
+    </div>
+
+    <script src="/scripts/main.js"></script>
+      
+  </body>
+</html>
